@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "825241698986",
+    "firebase_url": "https://udemyornek-c68c2.firebaseio.com",
+    "project_id": "udemyornek-c68c2",
+    "storage_bucket": "udemyornek-c68c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825241698986:android:9e87f92c2f3ede9ae786d3",
+        "android_client_info": {
+          "package_name": "com.example.firebase_ornek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825241698986-gc90tphhanpfnj52iccfhh2cfmd0qqr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase_ornek",
+            "certificate_hash": "a3bf32325688b397df7431142bf6d713f8837039"
+          }
+        },
+        {
+          "client_id": "825241698986-rnb25tc7uimc7cauikqt2sd01er6an36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase_ornek",
+            "certificate_hash": "24bf7e1f885b1e33ad62eaac35ef5a3e9a2a5004"
+          }
+        },
+        {
+          "client_id": "825241698986-4rnj5o1k837k5s6ki8nnkedfrdru5nep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgkQR41UtAen_CM-AuMibiedKYp7CZSPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825241698986-4rnj5o1k837k5s6ki8nnkedfrdru5nep.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "825241698986-u167i4c33v6v84tgdib194994sugmfs0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "asdasda"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
