@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_ornek/facebookuser.dart';
 import 'package:firebase_ornek/googleuser.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'custom_dialog.dart';
@@ -9,7 +11,13 @@ import 'user.dart';
 class HomeScreen extends StatefulWidget {
   GoogleUser googleUser;
   GoogleSignIn googleSignIn;
-  HomeScreen({this.googleUser, this.googleSignIn});
+  FacebookLogin facebookSignIn;
+  FacebookUser facebookUser;
+  HomeScreen(
+      {this.googleUser,
+      this.googleSignIn,
+      this.facebookSignIn,
+      this.facebookUser});
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -21,6 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
     await widget.googleSignIn.signOut();
 
     print("User Signed Out");
+  }
+
+  Future<Null> _logOut() async {
+    await widget.facebookSignIn.logOut();
+    print('Logged out.');
   }
 
   Future<List<User>> getData() async {
@@ -102,6 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: _scaffoldKey,
         appBar: new AppBar(
           title: Text('Firestore Ornek'),
+          backgroundColor: Colors.grey,
           actions: [
             InkWell(
               onTap: () {
@@ -118,26 +132,51 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            InkWell(
-              onTap: () {
-                signOutGoogle().then((value) {
-                  Navigator.pop(context);
-                });
-              },
-              child: Container(
-                width: 50,
-                height: 50,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      widget.googleUser.imageUrl,
+            (widget.googleSignIn != null)
+                ? InkWell(
+                    onTap: () {
+                      signOutGoogle().then((value) {
+                        Navigator.pop(context);
+                      });
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            widget.googleUser.imageUrl,
+                          ),
+                          backgroundColor: Colors.transparent,
+                        ),
+                      ),
                     ),
-                    backgroundColor: Colors.transparent,
-                  ),
-                ),
-              ),
-            )
+                  )
+                : SizedBox(),
+            (widget.facebookSignIn != null)
+                ? InkWell(
+                    onTap: () {
+                      _logOut().then((value) {
+                        Navigator.pop(context);
+                      });
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: CircleAvatar(
+                          child: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          backgroundColor: Colors.blue,
+                        ),
+                      ),
+                    ),
+                  )
+                : SizedBox()
           ],
         ),
         body: FutureBuilder(
