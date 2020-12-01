@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>825241698986-8384rggkvrk1lvankol3i4f9l3mmg7ao.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.825241698986-8384rggkvrk1lvankol3i4f9l3mmg7ao</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>825241698986-rnb25tc7uimc7cauikqt2sd01er6an36.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAczJR8kWAwbIajjp8Z66cSkwOTnxf-9kA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>825241698986</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.firebaseOrnek</string>
+	<key>PROJECT_ID</key>
+	<string>udemyornek-c68c2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>udemyornek-c68c2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:825241698986:ios:6953a97ed80a32b5e786d3</string>
+	<key>DATABASE_URL</key>
+	<string>https://udemyornek-c68c2.firebaseio.com</string>
+</dict>
+</plist>
